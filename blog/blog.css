@@ -1,0 +1,136 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #473144;
+  background-color: #fff;
+}
+
+h1, h2 {
+  font-family: 'Lora', serif;
+}
+
+a {
+  text-decoration: none;
+  color: #AF1B3F;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.skiptocontent a {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skiptocontent a:focus {
+  position: static;
+  background: #EFC69B;
+  padding: 0.5rem;
+  display: inline-block;
+  z-index: 1000;
+}
+
+.header-grid {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #fff;
+  border-bottom: 2px solid #AF1B3F;
+  gap: 1rem;
+}
+
+h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 2rem;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.header-right {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: right;
+  padding-right: 2%;
+  border-top: 2px solid #AF1B3F;
+  padding-top: 0.5rem;
+}
+
+nav ul {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 2rem;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+nav a {
+  color: #AF1B3F;
+  font-size: 1.1rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.right-column {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+}
+
+.book-entry {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem;
+  padding: 1rem 0;
+  grid-column: 1;
+}
+
+.left-column time {
+  font-size: 1rem;
+}
+
+.age-group, .genre, .rating {
+  margin: 0.25rem 0;
+}
+
+.book-title {
+  font-size: 1.25rem;
+  color: #AF1B3F;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.description {
+  font-size: 1rem;
+}
+
+.description a {
+  color: #AF1B3F;
+  font-weight: bold;
+  margin-left: 0.25rem;
+  text-decoration: none;
+}
+
+.description a:hover {
+  text-decoration: underline;
+}
