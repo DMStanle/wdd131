@@ -43,7 +43,7 @@ a:hover {
   grid-template-rows: auto auto;
   grid-template-columns: 1fr 1fr 1fr;
   background-color: #fff;
-  border-bottom: 2px solid #AF1B3F;
+  border-bottom: 2px solid yellow;
   gap: 1rem;
 }
 
@@ -60,7 +60,7 @@ h1 {
   display: flex;
   justify-content: right;
   padding-right: 2%;
-  border-top: 2px solid #AF1B3F;
+  border-top: 2px solid yellow;
   padding-top: 0.5rem;
 }
 
@@ -88,18 +88,38 @@ nav a {
 .right-column {
   grid-column: 2;
   grid-row: 1 / span 3;
+  border: 2px solid yellow;
 }
 
 .book-entry {
   display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 1rem;
-  padding: 1rem 0;
-  grid-column: 1;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  padding: 2rem 0;
+  grid-column: 1; /* Unsure if needed... I'll check later.*/
 }
 
 .left-column time {
+  font-weight: bold;
+  font-size: 1.1 rem;
+  text-align: right;
+  padding-right: 1rem;
+  margin-right: 1rem;
   font-size: 1rem;
+  line-height: 1.4;
+}
+
+.left-column {
+  text-align: right;
+  padding-right: 1rem;
+  margin-right: 1rem;
+  border-right: 2px solid yellow;
+}
+
+.center-column img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 200px;
 }
 
 .age-group, .genre, .rating {
@@ -111,6 +131,7 @@ nav a {
   color: #AF1B3F;
   font-weight: bold;
   margin: 0.5rem 0;
+  margin-top: 0;
 }
 
 img {
@@ -133,4 +154,13 @@ img {
 
 .description a:hover {
   text-decoration: underline;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.content article + article {
+  margin-top: 2rem;
 }
