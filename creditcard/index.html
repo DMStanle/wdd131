@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Credit Card Submission Form" />
+  <meta name="author" content="Your Name" />
+  <title>Credit Card Form</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" />
+</head>
+<body>
+  <div class="card-container">
+    <form>
+      <div class="card">
+        <p class="total">TOTAL: $199</p>
+        <img class="card-image" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgd2lkdGg9IjQ4IiBoZWlnaHQ9IjMwIiB2aWV3Qm94PSIwIDAgNDggMzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjQ4IiBoZWlnaHQ9IjMwIiBmaWxsPSIjZmU4NjU3IiByeD0iNCIvPjwvc3ZnPg==" height="30" />
+        
+        <label for="card-number">CARD NUMBER</label>
+        <input id="card-number" type="text" placeholder="1234 5678 9101 1020" required maxlength="19" />
+
+        <div class="row">
+          <div>
+            <label for="card-holder">CARD HOLDER</label>
+            <input id="card-holder" type="text" placeholder="John Doe" required />
+          </div>
+          <div>
+            <label for="expiration">EXPIRATION</label>
+            <input id="expiration" type="text" placeholder="MM / YY" required maxlength="7" />
+          </div>
+        </div>
+
+        <label for="cvv">CVC/CVV</label>
+        <input id="cvv" type="text" placeholder="xxx" required maxlength="4" />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
