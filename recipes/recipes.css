@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
 
-* {
+html, body {
+  height: 100%;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 :root {
@@ -17,43 +18,36 @@
 
 body {
   font-family: var(--primary-font);
-  background-color: #fff;
   color: var(--text-dark);
+  background: #fff;
 }
 
 header {
-  background-color: white;
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
-  padding: 1rem 0;
   gap: 0.75rem;
-  width: 100%;
-}
-
-header img {
-  width: 7rem;
-  height: auto;
+  padding: 1rem 0;
 }
 
 header h1 {
-  font-family: var(--secondary-font), sans-serif;
-  font-size: 7rem;
-  color: var(--text-dark);
   margin: 0;
+  font-family: var(--secondary-font);
+  font-size: clamp(2.6rem, 9vw, 7rem);
+  line-height: 1;
+  color: var(--text-dark);
 }
 
 .search-form {
+  width: 100%;
+  padding: 0 1rem 1rem;
+  border-bottom: 2px solid #eee;
   display: flex;
   justify-content: center;
-  margin: 0.75rem 0;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid #eee;
-  width: 100%;
 }
 
-.search-form label {
+.visually-hidden {
   position: absolute;
   left: -9999px;
 }
@@ -61,72 +55,75 @@ header h1 {
 .search-box {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
+  width: min(95%, 900px);
   border: 1px solid #ccc;
   border-radius: 6px;
   padding: 0.25rem 0.5rem;
-  width: 90%;
-  max-width: 900px;
-  background: white;
+  background: #fff;
 }
 
 .search-box input {
   flex: 1;
-  border: none;
-  outline: none;
+  border: 0;
+  outline: 0;
   font-size: 1rem;
   padding: 0.4rem 0.5rem;
 }
 
 .search-box button {
   background: none;
-  border: none;
-  border-left: 1px solid black;
+  border: 0;
   padding-left: 0.5rem;
-  margin-left: 0.5rem;
-  cursor: pointer;
+  margin-left: 0.25rem;
+  border-left: 1px solid #000;
   align-self: stretch;
-}
-
-.search-box button img {
-  width: 13px;
-  height: 13px;
+  cursor: pointer;
 }
 
 .recipe-card {
   display: flex;
   flex-direction: column;
-  background: white;
+  gap: 1rem;
+  width: min(90%, 1100px);
+  margin: 1rem auto;
+  padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 1rem;
-  width: 90%;
-  margin: 1rem auto;
+  background: #fff;
 }
 
 .recipe-card img {
-  justify-self: center;
-  align-self: center;
-  width: 24rem;
-  height: 24rem;
-  object-fit: cover;
+  width: 100%;
+  max-width: 420px;
   border-radius: 6px;
-  padding: 10px;
+  object-fit: cover;
+  align-self: center;
+}
+
+.recipe-info {
+  min-width: 0;
+  text-align: left;
 }
 
 .recipe-tag {
-  border:1px solid black;
-  border-radius:1px;
-  font-size: 1.8rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  border: 1px solid #000;
+  padding: 0.1rem 0.35rem;
+  font: 600 1rem/1 var(--primary-font);
   color: var(--text-dark);
-  font-family: var(--primary-font);
 }
 
 .recipe-card h2 {
-  color: #1B98E0;
+  margin: 0.25rem 0;
+  color: var(--primary-color);
   font-family: var(--secondary-font);
-  font-size: 2.5rem;
+  font-size: clamp(1.6rem, 5vw, 2.5rem);
 }
+
 .rating {
+  display: block;
   font-size: 2rem;
 }
 
@@ -134,90 +131,60 @@ header h1 {
   display: none;
 }
 
-.recipe-card, .recipe-info, .recipe-title, .recipe-tag, .rating {
-  text-align: left;
-}
-
-
 footer {
-  text-align: center;
-  margin-top: 2rem;
-  padding: 1rem 0;
-  background-color: white;
-  font-family: var(--primary-font);
+  margin-top: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+footer .credit {
   color: var(--text-dark);
-  font-size: 0.9rem;
-}
-
-footer a {
   text-decoration: none;
-  color: var(--primary-color);
-}
-
-footer a:hover {
-  text-decoration: underline;
+  font-size: 0.95rem;
 }
 
 footer .social {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.2rem;
-  margin-top: 0.8rem;
+  gap: 1rem;
+  order: -1;
 }
 
 footer .social img {
-  width: 50px;
-  height: 50px;
-  transition: transform 0.2s ease;
+  width: 30px;
+  height: 30px;
 }
-
-footer .social img:hover {
-  transform: scale(1.1);
-}
-
-
-
-
-
 
 @media (min-width: 600px) {
   .recipe-description {
     display: block;
   }
 
-  main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-  }
   .recipe-card {
-    display: flex;
     flex-direction: row;
-    align-items: center;
-    width: 90%;
+    align-items: flex-start;
   }
+
   .recipe-card img {
-    width: 30rem;
-    height: 30rem;
+    width: clamp(240px, 35vw, 420px);
+    height: auto;
+    flex: 0 0 auto;
+  }
+
+  .recipe-info {
+    flex: 1;
   }
 
   footer {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    padding: 1rem 2rem;
   }
 
   footer .social {
-    display: flex;
-    gap: 1rem;
-    order: 2;
-  }
-  footer a {
     order: 1;
-    text-align: left;
   }
 }
