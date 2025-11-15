@@ -64,8 +64,8 @@ header h1 {
   border: 1px solid #ccc;
   border-radius: 6px;
   padding: 0.25rem 0.5rem;
-  width: 100%;
-  max-width: 350px;
+  width: 90%;
+  max-width: 900px;
   background: white;
 }
 
@@ -95,20 +95,129 @@ header h1 {
 .recipe-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background: white;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 1rem;
-  max-width: 400px;
+  width: 90%;
   margin: 1rem auto;
 }
 
 .recipe-card img {
-  width: 20rem;
-  height: 20rem;
+  justify-self: center;
+  align-self: center;
+  width: 24rem;
+  height: 24rem;
   object-fit: cover;
   border-radius: 6px;
   padding: 10px;
+}
+
+.recipe-tag {
+  border:1px solid black;
+  border-radius:1px;
+  font-size: 1.8rem;
+  color: var(--text-dark);
+  font-family: var(--primary-font);
+}
+
+.recipe-card h2 {
+  color: #1B98E0;
+  font-family: var(--secondary-font);
+  font-size: 2.5rem;
+}
+.rating {
+  font-size: 2rem;
+}
+
+.recipe-description {
+  display: none;
+}
+
+.recipe-card, .recipe-info, .recipe-title, .recipe-tag, .rating {
+  text-align: left;
+}
+
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem 0;
+  background-color: white;
+  font-family: var(--primary-font);
+  color: var(--text-dark);
+  font-size: 0.9rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 0.8rem;
+}
+
+footer .social img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.2s ease;
+}
+
+footer .social img:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+@media (min-width: 600px) {
+  .recipe-description {
+    display: block;
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .recipe-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+  }
+  .recipe-card img {
+    width: 30rem;
+    height: 30rem;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+  }
+
+  footer .social {
+    display: flex;
+    gap: 1rem;
+    order: 2;
+  }
+  footer a {
+    order: 1;
+    text-align: left;
+  }
 }
