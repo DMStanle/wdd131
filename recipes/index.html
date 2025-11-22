@@ -18,8 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="recipes.css">
-  <script src="main.js" defer></script>
-  <script type="module" src="recipe.mjs"></script>
+  <script type="module" src="main.js"></script>
 </head>
 <body>
   <header>
@@ -37,24 +36,7 @@
         </button>
       </div>
     </form>
-
-    <section class="recipe-card" aria-labelledby="recipe-title">
-      <img src="images/sweet-potato-waffle-md.jpg" alt="Sweet Potato Waffles" />
-      <div class="recipe-info">
-        <span class="recipe-tag">Side</span>
-        <h2 id="recipe-title">Sweet Potato Waffles</h2>
-        <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-          <span aria-hidden="true">⭐</span>
-          <span aria-hidden="true">⭐</span>
-          <span aria-hidden="true">⭐</span>
-          <span aria-hidden="true">⭐</span>
-          <span aria-hidden="true">☆</span>
-        </span>
-        <p class="recipe-description">
-          Savory waffles made with sweet potato with a hint of ginger.
-        </p>
-      </div>
-    </section>
+    <section id="recipes"></section>
   </main>
 
   <footer>
