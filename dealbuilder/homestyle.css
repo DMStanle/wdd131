@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@300;400&display=swap');
+
+
+:root {
+  --primary-color: #1F3A5F;
+  --secondary-color: #4A78A6;
+  --accent1-color: #F5F7FA;
+  --accent2-color: white;
+
+  --headline-color-on-white: var(
+    --primary-color
+  );
+  --headline-color-on-color: white;
+  --paragraph-color-on-white: var(
+    --primary-color
+  );
+  --paragraph-color-on-color: white;
+  --paragraph-background-color: var(--primary-color);
+  --nav-link-color: var(--primary-color);
+  --nav-background-color: var(--secondary-color);
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: var(--primary-color);
+}
+
+
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: #4a78a6;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+    font-family: Lato, sans-serif;
+    font-size: 2rem;
+}
+
+nav a {
+    padding: 0.5rem 1rem;
+    background-color: #1F3A5F;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background-color: white;
+    color: #1F3A5F;
+}
+
+header img {
+    height: 170px;
+    padding: 1rem;
+}
+
+.title {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.title h1 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 1000;
+    font-size: 5rem;
+    color: var(--primary-color);
+    margin: 0 0 1rem;
+}
+
+.title-link {
+    text-decoration: none;
+    color: white;
+    background-color: #4A78A6;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+}
+
+.title-link:hover {
+    background-color: #1F3A5F;
+}
+
+.home-pics img {
+    width: 50%;
+    padding: 1%;
+}
