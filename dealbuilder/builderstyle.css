@@ -13,6 +13,7 @@
 
 body {
     font-family: Lato, sans-serif;
+    background-color: #dde5f0;
 }
 
 header {
@@ -175,15 +176,8 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 6%;
-    background-color: #f2f2f2;
-    margin-top: 3rem;
-}
-
-footer {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: space-between;
     background-color: #4a78a6;
+    margin-top: 3rem;
 }
 
 .social-icons {
@@ -196,8 +190,4 @@ footer p {
     color: white;
     align-self: center;
     padding: 1.1rem;
-}
-
-body {
-    background-color: #dde5f0;
 }

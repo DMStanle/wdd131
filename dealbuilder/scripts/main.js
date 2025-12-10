@@ -4,7 +4,6 @@ const productSelect = document.getElementById("product-select");
 const dealSelect = document.getElementById("deal-select");
 const totalSpan = document.getElementById("total-amount");
 const summaryText = document.getElementById("summary-text");
-const imageBox = document.querySelector(".builder-image-placeholder");
 const qrBox = document.getElementById("qr-code");
 const generateButton = document.getElementById("generate-qr");
 const yearSpan = document.getElementById("year");
@@ -30,6 +29,7 @@ function getDealLabel(value) {
     if (value === "20off") return "20% off";
     if (value === "tax-exempt") return "Tax exempt";
     if (value === "free-item-tax-full") return "Free item, taxed at full price";
+    if (value === "none") return "No discount";
     return "No discount";
 }
 
@@ -40,7 +40,6 @@ function calculateTotals() {
     if (!productId) {
         totalSpan.textContent = "$0.00";
         summaryText.textContent = "Select a product and deal to see the summary.";
-        imageBox.style.backgroundImage = "";
         qrBox.innerHTML = "QR Code";
         return null;
     }
@@ -80,14 +79,6 @@ function calculateTotals() {
 
     const dealLabel = getDealLabel(deal);
     summaryText.textContent = `${product.name} with ${dealLabel}. Base price: ${formatMoney(basePrice)}, discount: ${formatMoney(discount)}, tax: ${formatMoney(tax)}, total: ${formatMoney(total)}.`;
-
-    if (product.image) {
-        imageBox.style.backgroundImage = `url(${product.image})`;
-        imageBox.style.backgroundSize = "cover";
-        imageBox.style.backgroundPosition = "center";
-    } else {
-        imageBox.style.backgroundImage = "";
-    }
 
     return {
         product,
