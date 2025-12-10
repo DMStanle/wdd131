@@ -3,10 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Deal Builder helps employees quickly create custom product deals, calculate totals, and generate QR codes for checkout.">
+    <meta property="og:title" content="Deal Builder">
+    <meta property="og:description" content="Create custom product deals, calculate totals instantly, and generate QR codes for checkout.">
+    <meta property="og:image" content="https://dmstanle.github.io/wdd131/dealbuilder/images/dealbuilderlogo.png">
+    <meta property="og:url" content="https://dmstanle.github.io/wdd131/dealbuilder/">
+    <meta property="og:type" content="website">
+    <meta name="author" content="Drew Stanley">
+    <meta name="keywords" content="deals, pricing tool, calculator, QR code, store tools">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Deal Builder">
+    <meta name="twitter:description" content="Build custom product deals and generate QR codes instantly.">
+    <meta name="twitter:image" content="https://dmstanle.github.io/wdd131/dealbuilder/images/dealbuilderlogo.png">
+
+    <link rel="stylesheet" href="builderstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+
     <title>Builder</title>
 </head>
 <body>
-    <p>Builder</p>
-    
+
+    <header>
+        <a href="index.html">
+            <img src="images/dealbuilderlogo.png" alt="Deal Builder Logo">
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="builder.html">Builder</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="title">
+            <h1>Builder</h1>
+        </section>
+
+        <section class="builder-controls">
+
+            <label for="product-select">Select a Product</label>
+            <select id="product-select">
+                <option value="">Choose a product...</option>
+                <option value="macbook">MacBook Pro 14"</option>
+                <option value="ipad">iPad Air</option>
+                <option value="apple-pencil">Apple Pencil</option>
+                <option value="airpods-4">AirPods 4</option>
+            </select>
+
+            <label for="deal-type">Deal Type</label>
+            <select id="deal-type">
+                <option value="none">No discount</option>
+                <option value="percent">Percent Off</option>
+                <option value="free-tax-full">Free + Taxed at Full Price</option>
+                <option value="tax-exempt">Tax Exempt</option>
+            </select>
+
+            <label for="discount-input">Discount Percentage</label>
+            <input type="number" id="discount-input" min="0" max="100" value="0">
+
+        </section>
+
+        <section class="builder-results">
+            <h2>Summary</h2>
+
+            <p>Base Price: <span id="base-price">$0.00</span></p>
+            <p>Discounted Price: <span id="discounted-price">$0.00</span></p>
+            <p>Tax: <span id="tax">$0.00</span></p>
+            <p><strong>Total: <span id="total">$0.00</span></strong></p>
+        </section>
+
+        <section class="qr-section">
+            <button id="generate-qr">Generate QR Code</button>
+            <div id="qrcode"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Deal Builder — All Rights Reserved</p>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                <img src="images/instagram.png" alt="Instagram">
+            </a>
+
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                <img src="images/facebook.png" alt="Facebook">
+            </a>
+
+            <a href="https://www.x.com" target="_blank" aria-label="X (Twitter)">
+                <img src="images/twitter.png" alt="Twitter">
+            </a>
+        </div>
+    </footer>
+
 </body>
 </html>
