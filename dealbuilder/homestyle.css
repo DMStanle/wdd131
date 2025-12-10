@@ -22,7 +22,9 @@
   --nav-hover-background-color: var(--primary-color);
 }
 
-
+* {
+    box-sizing: border-box;
+}
 
 header {
     display: flex;
@@ -78,13 +80,104 @@ header img {
     border-radius: 6px;
     padding: 0.5rem 1rem;
     font-size: 2rem;
+    font-weight: 600;
+    transition: 0.2s;
 }
 
 .title-link:hover {
     background-color: #1F3A5F;
 }
 
-.home-pics img {
+.feature-1 img {
     width: 50%;
-    padding: 1%;
+    padding: 0.5rem;
+}
+
+.feature-2 img {
+    width: 50%;
+    padding: 0.5rem;
+}
+
+.feature-1 {
+    display: flex;
+    align-items: center;
+}
+
+.feature-2 {
+    display: flex;
+    align-items: center;
+}
+
+.feature-1 p, .feature-2 p {
+    text-align: center;
+    font-family: Lato, sans-serif;
+    color: #333;
+    margin: 0.5rem 0;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+footer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #4a78a6;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    padding: 1.1rem;
+}
+
+footer p {
+    color: white;
+    align-self: center;
+    padding: 1.1rem;
+}
+
+body {
+    background-color: #dde5f0;
+}
+
+
+
+
+@media (min-width: 1400px) {
+    .feature-1 p, .feature-2 p {
+        font-size: 1.3rem;
+        line-height: 1.7;
+        max-width: 40%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .feature-1,
+    .feature-2 {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .feature-1 img,
+    .feature-2 img {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .feature-1 p,
+    .feature-2 p {
+        width: 100%;
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: left;
+        padding: 0 1rem;
+    }
+
+    .title h1 {
+        font-size: 3rem;
+    }
 }
