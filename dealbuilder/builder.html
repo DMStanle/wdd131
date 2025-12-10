@@ -4,97 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Deal Builder helps employees quickly create custom product deals, calculate totals, and generate QR codes for checkout.">
-    <meta property="og:title" content="Deal Builder">
-    <meta property="og:description" content="Create custom product deals, calculate totals instantly, and generate QR codes for checkout.">
-    <meta property="og:image" content="https://dmstanle.github.io/wdd131/dealbuilder/images/dealbuilderlogo.png">
-    <meta property="og:url" content="https://dmstanle.github.io/wdd131/dealbuilder/">
-    <meta property="og:type" content="website">
-    <meta name="author" content="Drew Stanley">
-    <meta name="keywords" content="deals, pricing tool, calculator, QR code, store tools">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Deal Builder">
-    <meta name="twitter:description" content="Build custom product deals and generate QR codes instantly.">
-    <meta name="twitter:image" content="https://dmstanle.github.io/wdd131/dealbuilder/images/dealbuilderlogo.png">
 
     <link rel="stylesheet" href="builderstyle.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+
 
     <title>Builder</title>
 </head>
 <body>
 
-    <header>
-        <a href="index.html">
-            <img src="images/dealbuilderlogo.png" alt="Deal Builder Logo">
-        </a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="builder.html">Builder</a>
-        </nav>
-    </header>
+<header>
+    <a href="index.html">
+        <img src="images/dealbuilderlogo.png" alt="Deal Builder Logo">
+    </a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="builder.html">Builder</a>
+    </nav>
+</header>
 
-    <main>
-        <section class="title">
-            <h1>Builder</h1>
-        </section>
+<main>
+    <section class="title">
+        <h1>Builder</h1>
+    </section>
 
-        <section class="builder-controls">
-
-            <label for="product-select">Select a Product</label>
+    <section class="two-column">
+        <div class="builder-controls">
+            <label for="product-select">Product</label>
             <select id="product-select">
-                <option value="">Choose a product...</option>
-                <option value="macbook">MacBook Pro 14"</option>
-                <option value="ipad">iPad Air</option>
-                <option value="apple-pencil">Apple Pencil</option>
-                <option value="airpods-4">AirPods 4</option>
+                <option value="">Select a product</option>
             </select>
 
-            <label for="deal-type">Deal Type</label>
-            <select id="deal-type">
+            <label for="deal-select">Deal</label>
+            <select id="deal-select">
+                <option value="">Select a deal</option>
                 <option value="none">No discount</option>
-                <option value="percent">Percent Off</option>
-                <option value="free-tax-full">Free + Taxed at Full Price</option>
+                <option value="10off">10% off</option>
+                <option value="20off">20% off</option>
                 <option value="tax-exempt">Tax Exempt</option>
+                <option value="free-item-tax-full">Free item, texed at full price</option>
             </select>
 
-            <label for="discount-input">Discount Percentage</label>
-            <input type="number" id="discount-input" min="0" max="100" value="0">
+            <p class="total-display">Total — <span id="total-amount">$0.00</span></p>
 
-        </section>
+            <button id="generate-qr">Generate QR Code</button>
+        </div>
+
+        <div class="divider"></div>
 
         <section class="builder-results">
-            <h2>Summary</h2>
+            <div class="summary-card">
+                <h2>Builder Summary</h2>
+                <p id="summary-text">
+                    Your selected product and deal details will appear here.
+                </p>
+            </div>
 
-            <p>Base Price: <span id="base-price">$0.00</span></p>
-            <p>Discounted Price: <span id="discounted-price">$0.00</span></p>
-            <p>Tax: <span id="tax">$0.00</span></p>
-            <p><strong>Total: <span id="total">$0.00</span></strong></p>
+            <div class="builder-image">
+                <img class="wallet-image" src="images/wallet.jpg" alt="Wallet Image">
+            </div>
+
+            <div class="qr-section">
+                <h3>QR Code</h3>
+                <div id="qr-code" class="qr-box">QR Code</div>
+            </div>
         </section>
+    </section>
+</main>
 
-        <section class="qr-section">
-            <button id="generate-qr">Generate QR Code</button>
-            <div id="qrcode"></div>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; <span id="year"></span> Deal Builder — All Rights Reserved</p>
-
-        <div class="social-icons">
-            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
-                <img src="images/instagram.png" alt="Instagram">
-            </a>
-
-            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
-                <img src="images/facebook.png" alt="Facebook">
-            </a>
-
-            <a href="https://www.x.com" target="_blank" aria-label="X (Twitter)">
-                <img src="images/twitter.png" alt="Twitter">
-            </a>
-        </div>
-    </footer>
-
+<footer>
+    <p>&copy; <span id="year"></span> Deal Builder — All Rights Reserved</p>
+    <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="images/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="images/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.x.com" target="_blank">
+            <img src="images/twitter.png" alt="Twitter / X">
+        </a>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+<script type="module" src="scripts/main.js"></script>
 </body>
 </html>
