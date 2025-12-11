@@ -76,6 +76,9 @@ main {
 
 .wallet-image {
     max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
 }
 
 .divider {
@@ -146,13 +149,6 @@ main {
     line-height: 1.5;
 }
 
-.builder-image-placeholder {
-    width: 100%;
-    height: 230px;
-    border-radius: 8px;
-    background-color: #e0e0e0;
-}
-
 .qr-section h3 {
     color: var(--primary-color);
     font-family: Montserrat, sans-serif;
@@ -172,12 +168,12 @@ main {
 }
 
 footer {
+    margin-top: 2rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 1rem 6%;
     background-color: #4a78a6;
-    margin-top: 3rem;
+    padding: 1rem 6%;
+    align-items: center;
 }
 
 .social-icons {
@@ -190,4 +186,44 @@ footer p {
     color: white;
     align-self: center;
     padding: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 0.5rem 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header img {
+        height: 110px;
+        padding: 0.5rem;
+    }
+
+    nav {
+        font-size: 1.4rem;
+    }
+
+    main {
+        padding: 1.5rem 5% 2.5rem;
+    }
+
+    .two-column {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .social-icons {
+        padding-top: 0;
+    }
 }
